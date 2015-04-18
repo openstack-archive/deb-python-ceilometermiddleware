@@ -1,0 +1,5 @@
+python-ceilometermiddleware (0.1.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #788453)
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 18 Apr 2015 18:49:40 +0200

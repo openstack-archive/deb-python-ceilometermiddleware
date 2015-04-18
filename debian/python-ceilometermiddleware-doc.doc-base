@@ -1,0 +1,9 @@
+Document: python-ceilometermiddleware-doc
+Title: ceilometermiddleware Documentation
+Author: N/A
+Abstract: Sphinx documentation for ceilometermiddleware
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-ceilometermiddleware-doc/html/index.html
+Files: /usr/share/doc/python-ceilometermiddleware-doc/html/*
