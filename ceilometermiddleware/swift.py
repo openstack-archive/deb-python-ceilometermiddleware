@@ -30,20 +30,23 @@ before "proxy-server" and add the following filter in the file:
     # Set control_exchange to publish to.
     control_exchange = swift
     # Set transport url
-    transport_url = rabbit://me:passwd@host:5672/virtual_host
+    url = rabbit://me:passwd@host:5672/virtual_host
     # set messaging driver
     driver = messaging
     # set topic
     topic = notifications
+    # skip metering of requests from listed project ids
+    ignore_projects = <proj_uuid>, <proj_uuid2>
 """
 import functools
 import logging
 
-import oslo.messaging
 from oslo_config import cfg
 from oslo_context import context
+import oslo_messaging
 from oslo_utils import timeutils
 from pycadf import event as cadf_event
+from pycadf.helper import api
 from pycadf import measurement as cadf_measurement
 from pycadf import metric as cadf_metric
 from pycadf import resource as cadf_resource
@@ -99,11 +102,14 @@ class Swift(object):
 
     def __init__(self, app, conf):
         self._app = app
+        self.ignore_projects = [
+            proj.strip() for proj in
+            conf.get('ignore_projects', 'gnocchi').split(',')]
 
-        oslo.messaging.set_transport_defaults(conf.get('control_exchange',
+        oslo_messaging.set_transport_defaults(conf.get('control_exchange',
                                                        'swift'))
-        self._notifier = oslo.messaging.Notifier(
-            oslo.messaging.get_transport(cfg.CONF, url=conf.get('url')),
+        self._notifier = oslo_messaging.Notifier(
+            oslo_messaging.get_transport(cfg.CONF, url=conf.get('url')),
             publisher_id='ceilometermiddleware',
             driver=conf.get('driver', 'messaging'),
             topic=conf.get('topic', 'notifications'))
@@ -155,6 +161,12 @@ class Swift(object):
 
     @_log_and_ignore_error
     def emit_event(self, env, bytes_received, bytes_sent, outcome='success'):
+        if ((env.get('HTTP_X_SERVICE_PROJECT_ID') or
+                env.get('HTTP_X_PROJECT_ID') or
+                env.get('HTTP_X_TENANT_ID')) in self.ignore_projects or
+                env.get('swift.source') is not None):
+            return
+
         path = urlparse.quote(env['PATH_INFO'])
         method = env['REQUEST_METHOD']
         headers = {}
@@ -168,8 +180,15 @@ class Swift(object):
 
         try:
             container = obj = None
-            version, account, remainder = path.replace(
-                '/', '', 1).split('/', 2)
+            path = path.replace('/', '', 1)
+            version, account, remainder = path.split('/', 2)
+        except ValueError:
+            try:
+                version, account = path.split('/', 1)
+                remainder = None
+            except ValueError:
+                return
+        try:
             if not version or not account:
                 raise ValueError('Invalid path: %s' % path)
             if remainder:
@@ -205,10 +224,12 @@ class Swift(object):
         initiator = cadf_resource.Resource(
             typeURI='service/security/account/user',
             id=env.get('HTTP_X_USER_ID'))
-        initiator.project_id = env.get('HTTP_X_TENANT_ID')
+        initiator.project_id = (env.get('HTTP_X_PROJECT_ID') or
+                                env.get('HTTP_X_TENANT_ID'))
 
         # build notification body
         event = cadf_event.Event(eventTime=now, outcome=outcome,
+                                 action=api.convert_req_action(method),
                                  initiator=initiator, target=target,
                                  observer=cadf_resource.Resource(id='target'))
 
