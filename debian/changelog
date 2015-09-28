@@ -1,9 +1,10 @@
-python-ceilometermiddleware (0.3.0-1) UNRELEASED; urgency=medium
+python-ceilometermiddleware (0.3.0-1) experimental; urgency=medium
 
+  * Team upload.
   * New upstream release for OpenStack Liberty.
   * Align (Build-)Depends with upstream.
 
- -- James Page <james.page@ubuntu.com>  Thu, 17 Sep 2015 10:14:23 +0100
+ -- James Page <james.page@ubuntu.com>  Mon, 28 Sep 2015 12:51:01 +0100
 
 python-ceilometermiddleware (0.1.0-1) unstable; urgency=medium
 
