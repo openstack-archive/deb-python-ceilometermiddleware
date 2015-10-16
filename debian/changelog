@@ -1,6 +1,7 @@
 python-ceilometermiddleware (0.3.0-2) unstable; urgency=medium
 
   * Uploading to unstable.
+  * Watch file now using github tag instead of broken PyPi.
 
  -- Thomas Goirand <zigo@debian.org>  Fri, 16 Oct 2015 19:47:08 +0000
 
