@@ -1,3 +1,9 @@
+python-ceilometermiddleware (0.3.0-3) UNRELEASED; urgency=medium
+
+  * d/rules: Changed UPSTREAM_GIT protocol to https
+
+ -- Ondřej Nový <onovy@debian.org>  Sun, 26 Jun 2016 01:40:37 +0200
+
 python-ceilometermiddleware (0.3.0-2) unstable; urgency=medium
 
   * Uploading to unstable.
