@@ -6,6 +6,7 @@ python-ceilometermiddleware (0.4.0-1) UNRELEASED; urgency=medium
   * Changed B-D and D for new upstream release
   * Don't run Py3 tests
   * Changed Vcs-* fields to https version
+  * Standards-Version is 3.9.8 now (no changes needed)
 
  -- Ondřej Nový <onovy@debian.org>  Sun, 26 Jun 2016 01:40:37 +0200
 
