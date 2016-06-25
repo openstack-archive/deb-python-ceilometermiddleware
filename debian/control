@@ -27,8 +27,8 @@ Build-Depends-Indep: python-babel,
                      subunit,
                      testrepository,
 Standards-Version: 3.9.6
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/python-ceilometermiddleware.git
-Vcs-Git: git://anonscm.debian.org/openstack/python-ceilometermiddleware.git
+Vcs-Browser: https://anonscm.debian.org/cgit/openstack/python-ceilometermiddleware.git
+Vcs-Git: https://anonscm.debian.org/git/openstack/python-ceilometermiddleware.git
 Homepage: http://www.openstack.org/
 
 Package: python-ceilometermiddleware
