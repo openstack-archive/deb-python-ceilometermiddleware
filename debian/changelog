@@ -1,5 +1,6 @@
-python-ceilometermiddleware (0.3.0-3) UNRELEASED; urgency=medium
+python-ceilometermiddleware (0.4.0-1) UNRELEASED; urgency=medium
 
+  * New upstream release
   * d/rules: Changed UPSTREAM_GIT protocol to https
   * Added python-mock to B-D (Closes: #827688)
 
