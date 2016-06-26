@@ -1,5 +1,6 @@
-python-ceilometermiddleware (0.4.0-1) UNRELEASED; urgency=medium
+python-ceilometermiddleware (0.4.0-1) unstable; urgency=medium
 
+  * Team upload.
   * New upstream release
   * d/rules: Changed UPSTREAM_GIT protocol to https
   * Added python-mock to B-D (Closes: #827688)
@@ -12,7 +13,7 @@ python-ceilometermiddleware (0.4.0-1) UNRELEASED; urgency=medium
     - Added myself to Debian part
   * Enabled autopkgtest-pkg-python testsuite
 
- -- Ondřej Nový <onovy@debian.org>  Sun, 26 Jun 2016 01:40:37 +0200
+ -- Ondřej Nový <onovy@debian.org>  Sun, 26 Jun 2016 02:15:08 +0200
 
 python-ceilometermiddleware (0.3.0-2) unstable; urgency=medium
 
