@@ -10,6 +10,7 @@ python-ceilometermiddleware (0.4.0-1) UNRELEASED; urgency=medium
   * d/copyright
     - Reordered
     - Added myself to Debian part
+  * Enabled autopkgtest-pkg-python testsuite
 
  -- Ondřej Nový <onovy@debian.org>  Sun, 26 Jun 2016 01:40:37 +0200
 

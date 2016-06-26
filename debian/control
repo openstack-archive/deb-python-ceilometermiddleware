@@ -31,6 +31,7 @@ Standards-Version: 3.9.8
 Vcs-Browser: https://anonscm.debian.org/cgit/openstack/python-ceilometermiddleware.git
 Vcs-Git: https://anonscm.debian.org/git/openstack/python-ceilometermiddleware.git
 Homepage: http://www.openstack.org/
+Testsuite: autopkgtest-pkg-python
 
 Package: python-ceilometermiddleware
 Architecture: all
