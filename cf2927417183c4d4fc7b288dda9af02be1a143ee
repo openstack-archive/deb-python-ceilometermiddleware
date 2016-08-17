@@ -1,0 +1,9 @@
+Code-Review+2: Chris Dent <cdent@anticdent.org>
+Code-Review+2: gordon chung <gord@live.ca>
+Workflow+1: gordon chung <gord@live.ca>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Thu, 28 Jul 2016 15:24:07 +0000
+Reviewed-on: https://review.openstack.org/347882
+Project: openstack/deb-python-ceilometermiddleware
+Branch: refs/heads/master
