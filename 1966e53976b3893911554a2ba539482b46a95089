@@ -1,0 +1,9 @@
+Code-Review+1: Clint Adams <clint@gcfm.net>
+Code-Review+2: gordon chung <gord@live.ca>
+Workflow+1: gordon chung <gord@live.ca>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 13 Nov 2015 20:18:19 +0000
+Reviewed-on: https://review.openstack.org/228919
+Project: openstack/deb-python-ceilometermiddleware
+Branch: refs/heads/stable/liberty
