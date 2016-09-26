@@ -28,8 +28,8 @@ Build-Depends-Indep: python-babel,
                      subunit,
                      testrepository,
 Standards-Version: 3.9.8
-Vcs-Browser: https://anonscm.debian.org/cgit/openstack/python-ceilometermiddleware.git
-Vcs-Git: https://anonscm.debian.org/git/openstack/python-ceilometermiddleware.git
+Vcs-Browser: https://git.openstack.org/cgit/openstack/deb-python-ceilometermiddleware?h=debian%2Fnewton
+Vcs-Git: https://git.openstack.org/openstack/deb-python-ceilometermiddleware -b debian/newton
 Homepage: http://www.openstack.org/
 Testsuite: autopkgtest-pkg-python
 
