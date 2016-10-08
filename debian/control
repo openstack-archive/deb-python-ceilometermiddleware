@@ -57,22 +57,22 @@ Description: OpenStack Telemetry middleware for generating metrics - Python 2.x
  .
  This package contains the Python 2.x module.
 
-#Package: python3-ceilometermiddleware
-#Architecture: all
-#Depends: python3-oslo.config (>= 1:3.9.0),
-#         python3-oslo.messaging (>= 4.5.0),
-#         python3-oslo.utils (>= 3.5.0),
-#         python3-pbr (>= 1.8),
-#         python3-pycadf (>= 1.1.0),
-#         python3-six (>= 1.9.0),
-#         ${misc:Depends},
-#         ${python3:Depends},
-#Suggests: python-ceilometermiddleware-doc,
-#Description: OpenStack Telemetry middleware for generating metrics - Python 3.x
-# This library provides middleware modules designed to enable metric and event
-# data generation to be consumed by Ceilometer.
-# .
-# This package contains the Python 3.x module.
+Package: python3-ceilometermiddleware
+Architecture: all
+Depends: python3-oslo.config (>= 1:3.9.0),
+         python3-oslo.messaging (>= 4.5.0),
+         python3-oslo.utils (>= 3.5.0),
+         python3-pbr (>= 1.8),
+         python3-pycadf (>= 1.1.0),
+         python3-six (>= 1.9.0),
+         ${misc:Depends},
+         ${python3:Depends},
+Suggests: python-ceilometermiddleware-doc,
+Description: OpenStack Telemetry middleware for generating metrics - Python 3.x
+ This library provides middleware modules designed to enable metric and event
+ data generation to be consumed by Ceilometer.
+ .
+ This package contains the Python 3.x module.
 
 Package: python-ceilometermiddleware-doc
 Section: doc
