@@ -1,3 +1,9 @@
+python-ceilometermiddleware (0.5.0-3) unstable; urgency=medium
+
+  * Added Py3 support.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 08 Oct 2016 11:30:04 +0200
+
 python-ceilometermiddleware (0.5.0-2) unstable; urgency=medium
 
   [ Ondřej Nový ]
