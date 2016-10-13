@@ -1,0 +1,10 @@
+Code-Review+2: Mehdi Abaakouk (sileht) <sileht@redhat.com>
+Code-Review+1: Yarko Tymciurak <yarko.tymciurak@intel.com>
+Code-Review+2: gordon chung <gord@live.ca>
+Workflow+1: gordon chung <gord@live.ca>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 11 Oct 2016 18:21:15 +0000
+Reviewed-on: https://review.openstack.org/377238
+Project: openstack/deb-python-ceilometermiddleware
+Branch: refs/heads/master
