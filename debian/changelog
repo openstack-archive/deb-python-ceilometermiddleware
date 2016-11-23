@@ -1,3 +1,9 @@
+python-ceilometermiddleware (0.5.0-4) UNRELEASED; urgency=medium
+
+  * Bumped debhelper compat version to 10
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 24 Nov 2016 00:04:27 +0100
+
 python-ceilometermiddleware (0.5.0-3) unstable; urgency=medium
 
   * Added Py3 support.
