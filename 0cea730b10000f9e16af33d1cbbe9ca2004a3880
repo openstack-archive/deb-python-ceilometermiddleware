@@ -1,0 +1,9 @@
+Code-Review+2: gordon chung <gord@live.ca>
+Code-Review+1: Ken Giusti <kgiusti@gmail.com>
+Workflow+1: gordon chung <gord@live.ca>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 04 Apr 2017 17:52:15 +0000
+Reviewed-on: https://review.openstack.org/452793
+Project: openstack/deb-python-ceilometermiddleware
+Branch: refs/heads/master
