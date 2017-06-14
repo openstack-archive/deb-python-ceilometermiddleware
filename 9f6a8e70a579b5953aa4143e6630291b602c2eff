@@ -1,0 +1,8 @@
+Code-Review+2: gordon chung <gord@live.ca>
+Workflow+1: gordon chung <gord@live.ca>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 14 Jun 2017 21:16:08 +0000
+Reviewed-on: https://review.openstack.org/469361
+Project: openstack/deb-python-ceilometermiddleware
+Branch: refs/heads/stable/newton
